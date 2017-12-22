@@ -45,7 +45,7 @@
                                     (cadr (cadr board))
                                     (caar (cddr board)))))])
        (map car 
-            (filter (lambda (n) (car n))
+            (filter identity
                     (map all-equal? combos)))))
 
 ;;(show-board numbered-board)
